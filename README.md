@@ -1,5 +1,9 @@
 # Jeep Launcher
 
+<p align="center">
+  <img src="docs/images/jeep-launcher-cover.jpeg" width="800" alt="Interface do Jeep Launcher em uma central multimídia automotiva">
+</p>
+
 **Interface automotiva Android desenvolvida para centrais multimídia veiculares.**
 
 O Jeep Launcher é um aplicativo Android com interface horizontal (*landscape*), tema escuro e identidade visual automotiva. Seu objetivo é oferecer uma experiência de utilização simplificada, organizada e adequada às telas de centrais multimídia.
