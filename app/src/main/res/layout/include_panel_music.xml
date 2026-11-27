@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Painel direito: Música.
+
+  A capa da sessão ativa ocupa toda a superfície do cartão (centerCrop) e serve de
+  fundo para os demais elementos, que ficam sobre ela: cabeçalho no topo, faixa,
+  artista e controles na base, apoiados por um degradê contínuo até o escuro.
+  Não há segunda caixa nem card interno: é uma superfície única.
+
+  Sem capa, ou sem sessão, o fundo do cartão aparece e o ícone discreto permanece
+  no centro — o estado vazio original é preservado. clipToOutline recorta a imagem
+  no mesmo raio de canto de @drawable/bg_card.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_card"
+    android:clipToOutline="true">
+
+    <!-- Ícone do estado sem capa; fica sob a capa e desaparece quando ela existe -->
+    <ImageView
+        android:id="@+id/iv_album_placeholder"
+        android:layout_width="@dimen/album_icon_size"
+        android:layout_height="@dimen/album_icon_size"
+        android:layout_gravity="center"
+        android:alpha="0.55"
+        android:src="@drawable/ic_album"
+        android:contentDescription="@string/cd_album_cover" />
+
+    <!-- Capa do álbum: preenche todo o painel -->
+    <ImageView
+        android:id="@+id/iv_album_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:contentDescription="@string/cd_album_cover" />
+
+    <!-- Degradê principal: transparente no topo, escuro na base -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_music_scrim" />
+
+    <!-- Reforço de contraste sob o cabeçalho -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/music_top_scrim_height"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_music_scrim_top" />
+
+    <!-- Cabeçalho do painel, sobre a imagem -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/card_inner_padding"
+        android:paddingTop="@dimen/card_inner_padding"
+        android:paddingEnd="@dimen/card_inner_padding"
+        android:paddingBottom="6dp">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_music_note"
+            android:contentDescription="@string/panel_music_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Jeep.PanelTitle"
+            android:text="@string/panel_music_title" />
+    </LinearLayout>
+
+    <!-- Faixa, artista, estado vazio e controles, apoiados na base -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/card_inner_padding"
+        android:paddingEnd="@dimen/card_inner_padding"
+        android:paddingBottom="@dimen/card_inner_padding">
+
+        <TextView
+            android:id="@+id/tv_track_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/media_track_title_text"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:shadowColor="#99000000"
+            android:shadowRadius="5"
+            android:shadowDy="1"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/jeep_text_secondary"
+            android:textSize="@dimen/media_artist_text"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:shadowColor="#99000000"
+            android:shadowRadius="5"
+            android:shadowDy="1"
+            android:visibility="gone" />
+
+        <!-- Estado vazio / aviso de autorização -->
+        <TextView
+            android:id="@+id/tv_no_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/music_empty_title"
+            android:textColor="@color/jeep_text_primary"
+            android:textSize="@dimen/media_empty_title_text"
+            android:gravity="center"
+            android:shadowColor="#99000000"
+            android:shadowRadius="5"
+            android:shadowDy="1" />
+
+        <TextView
+            android:id="@+id/tv_no_media_hint"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/music_empty_hint"
+            android:textColor="@color/jeep_text_hint"
+            android:textSize="@dimen/media_empty_hint_text"
+            android:gravity="center"
+            android:shadowColor="#99000000"
+            android:shadowRadius="5"
+            android:shadowDy="1" />
+
+        <!-- Controles de reprodução -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/media_prev"
+                android:layout_width="@dimen/media_control_size"
+                android:layout_height="@dimen/media_control_size"
+                android:padding="12dp"
+                android:src="@drawable/ic_prev"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/cd_media_previous" />
+
+            <ImageView
+                android:id="@+id/media_play"
+                android:layout_width="@dimen/media_control_size"
+                android:layout_height="@dimen/media_control_size"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_play"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/cd_media_play_pause" />
+
+            <ImageView
+                android:id="@+id/media_next"
+                android:layout_width="@dimen/media_control_size"
+                android:layout_height="@dimen/media_control_size"
+                android:padding="12dp"
+                android:src="@drawable/ic_next"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/cd_media_next" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Contorno reposto por cima da capa; decorativo, não recebe toque -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_music_frame"
+        android:clickable="false"
+        android:focusable="false" />
+
+</FrameLayout>

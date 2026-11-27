@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="@color/jeep_text_secondary">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20.5 3l-1.5.5L15 2 9 3.5 3 2v18l1.5-.5L9 22l6-1.5 6 1.5V3l-1.5-.5zM9 19V5l6-1.5v14L9 19z" />
+</vector>

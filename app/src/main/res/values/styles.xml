@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Cartão padrão dos painéis (grafite, cantos discretamente arredondados) -->
+    <style name="JeepCard">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">@dimen/card_inner_padding</item>
+    </style>
+
+    <!-- Título dos painéis -->
+    <style name="TextAppearance.Jeep.PanelTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/jeep_text_secondary</item>
+        <item name="android:textSize">@dimen/panel_title_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <!-- Relógio em destaque do painel esquerdo -->
+    <style name="TextAppearance.Jeep.BigClock" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:textColor">@color/jeep_text_primary</item>
+        <item name="android:textSize">@dimen/info_big_time_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="TextAppearance.Jeep.BigDate" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/jeep_text_secondary</item>
+        <item name="android:textSize">@dimen/info_big_date_text</item>
+    </style>
+
+    <!-- Botão principal de navegação (laranja) -->
+    <style name="Button.JeepPrimary" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:textColor">@color/jeep_on_orange</item>
+        <item name="android:textSize">@dimen/nav_button_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">@dimen/nav_button_height</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <!-- Linha de seleção de provedor -->
+    <style name="ProviderRow">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/provider_row_padding</item>
+        <item name="android:paddingEnd">@dimen/provider_row_padding</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@drawable/bg_card</item>
+    </style>
+
+    <style name="ProviderIcon">
+        <item name="android:layout_width">@dimen/provider_icon_size</item>
+        <item name="android:layout_height">@dimen/provider_icon_size</item>
+        <item name="android:layout_marginEnd">@dimen/card_inner_padding</item>
+        <item name="android:tint">@color/jeep_text_secondary</item>
+    </style>
+
+    <style name="ProviderName">
+        <item name="android:textColor">@color/jeep_text_primary</item>
+        <item name="android:textSize">@dimen/provider_name_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProviderDesc">
+        <item name="android:textColor">@color/jeep_text_hint</item>
+        <item name="android:textSize">@dimen/provider_desc_text</item>
+    </style>
+
+    <style name="ProviderCheck">
+        <item name="android:layout_width">@dimen/provider_check_size</item>
+        <item name="android:layout_height">@dimen/provider_check_size</item>
+        <item name="android:layout_marginStart">@dimen/card_inner_padding</item>
+        <item name="android:tint">@color/jeep_orange</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!-- Atalho da barra inferior (área de toque generosa) -->
+    <style name="ShortcutItem">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:minHeight">@dimen/shortcut_touch_min</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="ShortcutIcon">
+        <item name="android:layout_width">@dimen/shortcut_icon_size</item>
+        <item name="android:layout_height">@dimen/shortcut_icon_size</item>
+        <item name="android:layout_marginBottom">@dimen/shortcut_gap</item>
+        <item name="android:tint">@color/jeep_text_secondary</item>
+    </style>
+
+    <style name="ShortcutLabel">
+        <item name="android:textColor">@color/jeep_text_secondary</item>
+        <item name="android:textSize">@dimen/shortcut_label_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

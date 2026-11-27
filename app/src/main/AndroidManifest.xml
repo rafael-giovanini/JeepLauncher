@@ -2,6 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--
+      Visibilidade de pacotes (Android 11+, targetSdk 37):
+      - pacotes conhecidos do Google Maps e Waze para resolução/abertura;
+      - intenção MAIN/LAUNCHER para a descoberta de instalações do iGO.
+      Não há permissões novas: queries declaradas não exigem <uses-permission>.
+    -->
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+        <package android:name="com.waze" />
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,6 +29,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
+            android:screenOrientation="landscape"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +37,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--
+          Listener de notificações: é o componente que o Android exige para que o
+          aplicativo possa ler as sessões de mídia de outros apps. O usuário
+          habilita em Configurações > Acesso a notificações; nenhuma notificação
+          é lida ou processada por este serviço.
+        -->
+        <service
+            android:name=".media.MediaSessionListenerService"
+            android:exported="true"
+            android:label="@string/media_listener_label"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

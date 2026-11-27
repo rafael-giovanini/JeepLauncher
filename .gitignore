@@ -16,3 +16,20 @@ local.properties
 
 # Android Studio local configuration
 .idea/
+
+# Builds e pacotes gerados
+**/build/
+*.apk
+*.aab
+
+# Chaves e certificados
+*.jks
+*.keystore
+
+# Logs
+*.log
+
+# Imagens utilizadas apenas em testes
+Gemini_Generated_Image_n4erx6n4erx6n4er.jpeg
+
+jeep-launcher.png

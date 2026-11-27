@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Sombra em degradê aplicada sobre a capa do painel Música.
+  Vai de totalmente transparente no topo até o fundo escuro do aplicativo na base,
+  cobrindo toda a altura do painel: a transição é contínua, sem faixa ou caixa
+  separada. A cor final coincide com @color/jeep_background para que o degradê
+  encoste nos cantos arredondados sem emenda visível.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:type="linear"
+        android:angle="270"
+        android:startColor="#00000000"
+        android:centerColor="#73000000"
+        android:endColor="#FF0B0D10" />
+</shape>

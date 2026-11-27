@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Espaçamentos gerais -->
+    <dimen name="screen_padding">14dp</dimen>
+    <dimen name="panel_margin">10dp</dimen>
+    <dimen name="card_inner_padding">16dp</dimen>
+    <dimen name="card_corner">12dp</dimen>
+    <dimen name="card_stroke">1dp</dimen>
+    <dimen name="card_stroke_selected">2dp</dimen>
+
+    <!-- Barra superior -->
+    <dimen name="top_bar_height">64dp</dimen>
+    <dimen name="top_bar_icon_size">26dp</dimen>
+    <dimen name="top_bar_icon_padding">10dp</dimen>
+    <dimen name="top_bar_time_text">24sp</dimen>
+    <dimen name="top_bar_date_text">13sp</dimen>
+    <dimen name="top_status_text">13sp</dimen>
+
+    <!-- Painel esquerdo: Informações -->
+    <dimen name="panel_title_text">15sp</dimen>
+    <dimen name="info_big_time_text">52sp</dimen>
+    <dimen name="info_big_date_text">16sp</dimen>
+    <dimen name="vehicle_block_height">116dp</dimen>
+    <dimen name="vehicle_block_title_text">14sp</dimen>
+    <dimen name="vehicle_block_hint_text">12sp</dimen>
+
+    <!-- Painel central: Navegação -->
+    <dimen name="nav_title_text">22sp</dimen>
+    <dimen name="nav_section_text">14sp</dimen>
+    <dimen name="nav_hint_text">12sp</dimen>
+    <dimen name="provider_row_height">66dp</dimen>
+    <dimen name="provider_row_gap">10dp</dimen>
+    <dimen name="provider_row_padding">14dp</dimen>
+    <dimen name="provider_icon_size">32dp</dimen>
+    <dimen name="provider_name_text">17sp</dimen>
+    <dimen name="provider_desc_text">12sp</dimen>
+    <dimen name="provider_check_size">22dp</dimen>
+    <dimen name="nav_button_height">50dp</dimen>
+    <dimen name="nav_button_corner">10dp</dimen>
+    <dimen name="nav_button_text">17sp</dimen>
+
+    <!-- Painel direito: Música -->
+    <dimen name="album_cover_size">112dp</dimen>
+    <dimen name="album_cover_corner">10dp</dimen>
+    <dimen name="album_icon_size">56dp</dimen>
+    <dimen name="media_empty_title_text">15sp</dimen>
+    <dimen name="media_empty_hint_text">12sp</dimen>
+    <dimen name="media_track_title_text">18sp</dimen>
+    <dimen name="media_artist_text">13sp</dimen>
+    <dimen name="music_top_scrim_height">84dp</dimen>
+    <dimen name="media_control_size">50dp</dimen>
+    <dimen name="media_control_icon">30dp</dimen>
+
+    <!-- Barra inferior de atalhos -->
+    <dimen name="bottom_bar_height">88dp</dimen>
+    <dimen name="shortcut_touch_min">72dp</dimen>
+    <dimen name="shortcut_icon_size">38dp</dimen>
+    <dimen name="shortcut_label_text">13sp</dimen>
+    <dimen name="shortcut_gap">8dp</dimen>
+</resources>

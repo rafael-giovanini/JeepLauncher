@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Painel central (maior): controle de acesso ao aplicativo de navegação.
+     Não embuti mapas nesta etapa: o painel seleciona o provedor e aciona o aplicativo externo. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/JeepCard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/panel_nav_title"
+        android:textColor="@color/jeep_text_primary"
+        android:textSize="@dimen/nav_title_text"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/nav_section_providers"
+        android:textColor="@color/jeep_text_secondary"
+        android:textSize="@dimen/nav_section_text"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/nav_change_hint"
+        android:textColor="@color/jeep_text_hint"
+        android:textSize="@dimen/nav_hint_text" />
+
+    <!-- Lista de provedores: Google Maps (padrão), Waze e iGO.
+         Altura ponderada: as linhas se ajustam à altura disponível sem estouro. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/provider_row_maps"
+            style="@style/ProviderRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/provider_row_gap">
+
+            <ImageView
+                android:id="@+id/provider_icon_maps"
+                style="@style/ProviderIcon"
+                android:src="@drawable/ic_map"
+                android:contentDescription="@string/provider_google_maps" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/provider_name_maps"
+                    style="@style/ProviderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/provider_google_maps" />
+
+                <TextView
+                    style="@style/ProviderDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/provider_google_maps_desc" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/provider_check_maps"
+                style="@style/ProviderCheck"
+                android:src="@drawable/ic_check" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/provider_row_waze"
+            style="@style/ProviderRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/provider_row_gap">
+
+            <ImageView
+                android:id="@+id/provider_icon_waze"
+                style="@style/ProviderIcon"
+                android:src="@drawable/ic_navigation"
+                android:contentDescription="@string/provider_waze" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/provider_name_waze"
+                    style="@style/ProviderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/provider_waze" />
+
+                <TextView
+                    style="@style/ProviderDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/provider_waze_desc" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/provider_check_waze"
+                style="@style/ProviderCheck"
+                android:src="@drawable/ic_check" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/provider_row_igo"
+            style="@style/ProviderRow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/provider_icon_igo"
+                style="@style/ProviderIcon"
+                android:src="@drawable/ic_sd_storage"
+                android:contentDescription="@string/provider_igo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/provider_name_igo"
+                    style="@style/ProviderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/provider_igo" />
+
+                <TextView
+                    style="@style/ProviderDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/provider_igo_desc" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/provider_check_igo"
+                style="@style/ProviderCheck"
+                android:src="@drawable/ic_check" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Botão principal: aciona o provedor selecionado (lógica de abertura separada da seleção) -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nav_open_button"
+        style="@style/Button.JeepPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/nav_open_button" />
+
+</LinearLayout>

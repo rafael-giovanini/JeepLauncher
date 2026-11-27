@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Cores básicas preservadas do projeto original -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- ===== Identidade visual Jeep Launcher (premium automotiva) ===== -->
+    <!-- Fundos: preto e grafite escuro -->
+    <color name="jeep_background">#FF0B0D10</color>
+    <color name="jeep_background_alt">#FF101318</color>
+
+    <!-- Cartões: grafite / cinza escuro -->
+    <color name="jeep_card">#FF1B1F26</color>
+    <color name="jeep_card_elevated">#FF242932</color>
+    <color name="jeep_card_selected">#FF3A2A17</color>
+    <color name="jeep_vehicle_block">#FF161A20</color>
+    <color name="jeep_album_placeholder">#FF2A2F38</color>
+
+    <!-- Bordas e divisores -->
+    <color name="jeep_stroke">#FF333942</color>
+    <color name="jeep_divider">#FF2E343D</color>
+
+    <!-- Destaque: laranja -->
+    <color name="jeep_orange">#FFFF8A1E</color>
+    <color name="jeep_orange_dark">#FFE07300</color>
+    <color name="jeep_on_orange">#FF1A1205</color>
+    <color name="jeep_stroke_selected">#FFFF8A1E</color>
+
+    <!-- Textos: branco e cinza claro -->
+    <color name="jeep_text_primary">#FFF2F4F7</color>
+    <color name="jeep_text_secondary">#FFB9C0C9</color>
+    <color name="jeep_text_hint">#FF848C97</color>
+
+    <!-- Controles provisórios / desativados nesta etapa -->
+    <color name="jeep_control_disabled">#FF5A616B</color>
 </resources>

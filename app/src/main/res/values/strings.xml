@@ -1,3 +1,72 @@
 <resources>
     <string name="app_name">Jeep Launcher</string>
+
+    <!-- Barra superior -->
+    <string name="top_status_reserved">Status do veículo</string>
+    <string name="top_status_reserved_hint">Informações de status serão exibidas aqui</string>
+
+    <!-- Painel esquerdo: Informações -->
+    <string name="panel_info_title">Informações</string>
+    <string name="panel_vehicle_block_title">Informações do veículo</string>
+    <string name="panel_vehicle_block_hint">Dados do veículo serão exibidos nesta área</string>
+
+    <!-- Painel central: Navegação -->
+    <string name="panel_nav_title">Navegação</string>
+    <string name="nav_section_providers">Aplicativo de navegação</string>
+    <string name="nav_change_hint">Toque em uma opção para alterar o aplicativo</string>
+    <string name="nav_open_button">Abrir navegação</string>
+
+    <string name="provider_google_maps">Google Maps</string>
+    <string name="provider_waze">Waze</string>
+    <string name="provider_igo">iGO</string>
+    <string name="provider_google_maps_desc">Mapas e rotas do Google</string>
+    <string name="provider_waze_desc">Trânsito em tempo real</string>
+    <string name="provider_igo_desc">Navegação offline</string>
+
+    <string name="nav_launch_ok">Abrindo %1$s…</string>
+    <string name="nav_launch_unavailable">%1$s não está disponível nesta versão</string>
+    <string name="nav_launch_uninstalled">%1$s não está instalado nesta central</string>
+
+    <!-- iGO: sem pacote fixo; escolha da instalação compatível -->
+    <string name="nav_igo_not_found">Nenhum aplicativo iGO foi encontrado nesta central</string>
+    <string name="nav_igo_pick_title">Escolha o aplicativo iGO</string>
+    <string name="nav_igo_picked">iGO selecionado: %1$s</string>
+    <string name="nav_igo_none_selected">Nenhum aplicativo iGO selecionado</string>
+
+    <!-- Painel direito: Música -->
+    <string name="panel_music_title">Música</string>
+    <string name="music_empty_title">Nenhuma mídia em reprodução</string>
+    <string name="music_empty_hint">Os controles de áudio aparecerão quando houver uma fonte conectada</string>
+    <string name="media_controls_unavailable">Controles de mídia indisponíveis nesta versão</string>
+
+    <!-- Painel Música: integração com as sessões de mídia do Android -->
+    <string name="media_need_access">Toque para permitir o acesso à mídia</string>
+    <string name="media_need_access_hint">O Jeep Launcher usa o acesso às notificações para controlar a música de outros aplicativos</string>
+    <string name="media_unknown_track">Faixa desconhecida</string>
+    <string name="media_unknown_artist">Artista desconhecido</string>
+    <string name="media_listener_label">Controle de mídia do Jeep Launcher</string>
+
+    <!-- Barra inferior de atalhos -->
+    <string name="shortcut_navigation">Navegação</string>
+    <string name="shortcut_radio">Rádio</string>
+    <string name="shortcut_music">Música</string>
+    <string name="shortcut_phone">Telefone</string>
+    <string name="shortcut_bluetooth">Bluetooth</string>
+    <string name="shortcut_apps">Aplicativos</string>
+    <!-- Atalho provisório (sem integração nesta etapa) -->
+    <string name="shortcut_provisional">%1$s estará disponível em breve</string>
+
+    <!-- Placeholders iniciais do relógio (substituídos pelo ClockController) -->
+    <string name="clock_placeholder_time">--:--</string>
+    <string name="clock_placeholder_date">--/--/----</string>
+
+    <!-- Descrições de acessibilidade -->
+    <string name="cd_bluetooth">Indicador visual de Bluetooth</string>
+    <string name="cd_location">Indicador visual de localização</string>
+    <string name="cd_media_previous">Faixa anterior</string>
+    <string name="cd_media_play_pause">Reproduzir ou pausar</string>
+    <string name="cd_media_next">Próxima faixa</string>
+    <string name="cd_media_play">Reproduzir</string>
+    <string name="cd_media_pause">Pausar</string>
+    <string name="cd_album_cover">Capa do álbum</string>
 </resources>

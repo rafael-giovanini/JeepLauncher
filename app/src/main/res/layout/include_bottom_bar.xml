@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barra inferior fixa: seis atalhos com área de toque generosa para uso automotivo.
+     Atalhos sem integração exibem apenas uma mensagem provisória (sem erros). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_bottom_bar"
+    android:paddingStart="@dimen/screen_padding"
+    android:paddingEnd="@dimen/screen_padding">
+
+    <LinearLayout
+        android:id="@+id/shortcut_navigation"
+        style="@style/ShortcutItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/ShortcutIcon"
+            android:src="@drawable/ic_navigation"
+            android:contentDescription="@string/shortcut_navigation" />
+
+        <TextView
+            style="@style/ShortcutLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shortcut_navigation" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shortcut_radio"
+        style="@style/ShortcutItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/ShortcutIcon"
+            android:src="@drawable/ic_radio"
+            android:contentDescription="@string/shortcut_radio" />
+
+        <TextView
+            style="@style/ShortcutLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shortcut_radio" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shortcut_music"
+        style="@style/ShortcutItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/ShortcutIcon"
+            android:src="@drawable/ic_music_note"
+            android:contentDescription="@string/shortcut_music" />
+
+        <TextView
+            style="@style/ShortcutLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shortcut_music" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shortcut_phone"
+        style="@style/ShortcutItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/ShortcutIcon"
+            android:src="@drawable/ic_phone"
+            android:contentDescription="@string/shortcut_phone" />
+
+        <TextView
+            style="@style/ShortcutLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shortcut_phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shortcut_bluetooth"
+        style="@style/ShortcutItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/ShortcutIcon"
+            android:src="@drawable/ic_bluetooth"
+            android:contentDescription="@string/shortcut_bluetooth" />
+
+        <TextView
+            style="@style/ShortcutLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shortcut_bluetooth" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shortcut_apps"
+        style="@style/ShortcutItem"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            style="@style/ShortcutIcon"
+            android:src="@drawable/ic_apps"
+            android:contentDescription="@string/shortcut_apps" />
+
+        <TextView
+            style="@style/ShortcutLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shortcut_apps" />
+    </LinearLayout>
+
+</LinearLayout>

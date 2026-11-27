@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Contorno do painel Música desenhado por cima da capa.
+  O fundo @drawable/bg_card fica atrás da imagem e some sob ela; esta camada
+  repõe a borda de 1dp e o raio de canto, mantendo o acabamento dos demais painéis.
+  Preenchimento transparente; não intercepta toques.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/transparent" />
+    <corners android:radius="@dimen/card_corner" />
+    <stroke
+        android:width="@dimen/card_stroke"
+        android:color="@color/jeep_stroke" />
+</shape>
